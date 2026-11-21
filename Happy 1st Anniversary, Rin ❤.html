@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Happy 1st Anniversary, Kanokwan! ❤️</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <!-- Font Awesome for Icons -->
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Mali:wght@400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosepink: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                        },
+                        warmcream: '#fffdfa',
+                    },
+                    fontFamily: {
+                        handwriting: ['Dancing Script', 'Mali', 'cursive'],
+                        sans: ['Plus Jakarta Sans', 'Noto Sans Thai', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Animations */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; }
+        }
+
+        .floating-heart {
+            position: absolute;
+            bottom: -50px;
+            animation: float 10s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-slow 3s ease-in-out infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fff1f2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fda4af;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #fb7185;
+        }
+
+        /* Glassmorphism effects */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .glass-card-dark {
+            background: rgba(255, 241, 242, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(253, 164, 175, 0.3);
+        }
+
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans','Noto Sans Thai',sans-serif;background:#fff5f6;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.aurora{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.aurora i{position:absolute;width:55vmax;height:55vmax;border-radius:50%;filter:blur(90px);opacity:.55;animation:drift 22s ease-in-out infinite alternate}
+.aurora i:nth-child(1){background:#fda4af;top:-15vmax;left:-10vmax}
+.aurora i:nth-child(2){background:#fcd34d;bottom:-20vmax;right:-15vmax;animation-delay:-7s;opacity:.35}
+.aurora i:nth-child(3){background:#c4b5fd;top:35%;left:40%;animation-delay:-13s;opacity:.4}
+@keyframes drift{to{transform:translate(12vmax,8vmax) scale(1.2)}}
+@keyframes shine{to{background-position:200% 0}}
+#hero-title{background:linear-gradient(90deg,#be123c,#f43f5e,#f59e0b,#f43f5e,#be123c);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shine 6s linear infinite;filter:drop-shadow(0 4px 18px rgba(244,63,94,.25))}
+.glass-card{box-shadow:0 10px 40px -12px rgba(244,63,94,.25);transition:transform .4s,box-shadow .4s}
+.glass-card:hover{transform:translateY(-3px)}
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.js .reveal.in{opacity:1;transform:none}
+.paper{background:linear-gradient(180deg,#fffdf7,#fff6ee);border-radius:1.5rem;padding:1.5rem;border:1px solid #fed7aa;box-shadow:inset 0 0 60px rgba(251,191,36,.12),0 12px 30px -14px rgba(0,0,0,.2);position:relative}
+@media(min-width:768px){.paper{padding:2.5rem}}
+.paper:before{content:"";position:absolute;inset:10px;border:1px dashed #fda4af;border-radius:1.1rem;pointer-events:none}
+.thai,.thai p,.thai span{font-family:'Mali','Noto Sans Thai',sans-serif !important;color:#3b1d2a;line-height:2.05;letter-spacing:.01em}
+.thai .font-handwriting{color:#be123c !important;font-weight:700}
+.thai p{font-size:1.05rem}
+#love-btn{position:fixed;top:calc(1rem + env(safe-area-inset-top,0px));right:1rem;z-index:50;background:linear-gradient(135deg,#f43f5e,#fb923c);color:#fff;font-weight:700;padding:.65rem 1.1rem;border-radius:9999px;box-shadow:0 8px 24px rgba(244,63,94,.45);border:0;cursor:pointer;animation:pulse-slow 2.5s infinite}
+.burst{position:fixed;z-index:60;pointer-events:none;font-size:1.6rem;animation:burst 1.4s ease-out forwards}
+@keyframes burst{to{transform:translate(var(--dx),var(--dy)) rotate(var(--r));opacity:0}}
+.spark{position:fixed;z-index:60;pointer-events:none;font-size:.9rem;animation:burst .9s ease-out forwards}
+.tl-dot{box-shadow:0 0 0 6px rgba(244,63,94,.18)}
+    </style>
+</head>
+<body class="bg-gradient-to-br from-rosepink-50 via-warmcream to-rosepink-100 text-slate-700 font-sans min-h-screen relative overflow-x-hidden selection:bg-rosepink-200 selection:text-rosepink-600">
+
+    <!-- Floating Background Hearts Container -->
+    <div id="hearts-container" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
+
+    <div class="aurora"><i></i><i></i><i></i></div>
+    <button id="love-btn" type="button">💌 Tap for love</button>
+
+    <!-- Main Container -->
+    <div class="relative z-10 max-w-4xl mx-auto px-4 py-12 md:py-16 space-y-16">
+
+        <!-- Header / Hero Section -->
+        <header class="text-center space-y-4">
+            <div class="inline-block relative">
+                <span class="text-rosepink-500 font-handwriting text-3xl md:text-4xl block mb-2 animate-bounce">สุขสันต์วันครบรอบ 1 ปี✨</span>
+                <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold text-slate-800 tracking-tight">
+                    Happy 1 Year, My Baby Rin! ❤️
+                </h1>
+                <h2 class="text-xl md:text-2xl font-bold text-rosepink-500 mt-2">
+                    To My Beloved Baby
+                </h2>
+                <div class="h-1 w-24 bg-rosepink-400 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <!-- Dedicated Pet Names Banner -->
+            <div class="pt-2 flex flex-wrap justify-center items-center gap-2 text-xs md:text-sm font-semibold text-rosepink-600">
+                <span class="bg-rosepink-100 px-3 py-1 rounded-full shadow-sm">💖 Manika</span>
+                <span class="bg-rosepink-100 px-3 py-1 rounded-full shadow-sm">🥰 Babu</span>
+                <span class="bg-rosepink-100 px-3 py-1 rounded-full shadow-sm">🌸 Chooti</span>
+                <span class="bg-rosepink-100 px-3 py-1 rounded-full shadow-sm">✨ Mani</span>
+                <span class="bg-rosepink-100 px-3 py-1 rounded-full shadow-sm">💖 Flat world</span>
+            </div>
+
+            <p id="hero-subtitle" class="text-slate-600 max-w-xl mx-auto text-base md:text-lg font-light leading-relaxed pt-2">
+                 ริน (ภรรยาของผม เพื่อนที่ดีที่สุดของผม และโลกทั้งใบของผม) สุขสันต์วันครบรอบ 1 ปีแห่งความรัก (วันครบรอบแต่งงาน) และความทรงจำดีๆ ที่เราได้สร้างร่วมกันนะ!
+            </p>
+        </header>
+
+        <!-- Dynamic Live Time Counter (Years, Months, Days, Hours, Minutes, Seconds) -->
+        <section class="glass-card p-6 md:p-10 rounded-3xl shadow-md text-center border border-rosepink-200">
+            <div class="w-14 h-14 bg-rosepink-100 rounded-full flex items-center justify-center text-rosepink-500 mx-auto mb-3 text-2xl">
+                <span class="animate-pulse-slow">💗</span>
+            </div>
+            <h3 class="text-sm font-bold uppercase tracking-widest text-rosepink-600 mb-1">Time We Have Been Together</h3>
+            <p class="text-xs text-slate-500 mb-6">Counting every second since November 22, 2025 (Thailand Time UTC+7)</p><p id="countdown" class="text-sm font-bold text-rosepink-600 mb-6 -mt-3"></p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 md:gap-4 my-4">
+                <div class="bg-white/90 p-4 rounded-2xl shadow-sm border border-rosepink-100 flex flex-col justify-center items-center">
+                    <span id="years-count" class="text-3xl md:text-4xl font-black text-rosepink-600">0</span>
+                    <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Years</span>
+                </div>
+                <div class="bg-white/90 p-4 rounded-2xl shadow-sm border border-rosepink-100 flex flex-col justify-center items-center">
+                    <span id="months-count" class="text-3xl md:text-4xl font-black text-rosepink-600">0</span>
+                    <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Months</span>
+                </div>
+                <div class="bg-white/90 p-4 rounded-2xl shadow-sm border border-rosepink-100 flex flex-col justify-center items-center">
+                    <span id="days-count" class="text-3xl md:text-4xl font-black text-rosepink-600">0</span>
+                    <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Days</span>
+                </div>
+                <div class="bg-white/90 p-4 rounded-2xl shadow-sm border border-rosepink-100 flex flex-col justify-center items-center">
+                    <span id="hours-count" class="text-3xl md:text-4xl font-black text-rosepink-600">00</span>
+                    <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Hours</span>
+                </div>
+                <div class="bg-white/90 p-4 rounded-2xl shadow-sm border border-rosepink-100 flex flex-col justify-center items-center">
+                    <span id="minutes-count" class="text-3xl md:text-4xl font-black text-rosepink-600">00</span>
+                    <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Minutes</span>
+                </div>
+                <div class="bg-white/90 p-4 rounded-2xl shadow-sm border border-rosepink-100 flex flex-col justify-center items-center">
+                    <span id="seconds-count" class="text-3xl md:text-4xl font-black text-rosepink-600 animate-pulse">00</span>
+                    <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Seconds</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Romantic Letter -->
+        <section class="glass-card rounded-3xl p-6 md:p-10 shadow-sm relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-6 text-rosepink-200 pointer-events-none opacity-40">
+                <span class="text-8xl">❝</span>
+            </div>
+            
+            <div class="flex justify-between items-center mb-6">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">💌</span>
+                    <h2 class="text-2xl font-bold text-slate-800">A Letter for You (22 พฤศจิกายน)</h2>
+                </div>
+            </div>
+
+            <!-- Letter Display View -->
+            <div id="letter-view" class="thai paper space-y-4 font-sans text-slate-700 leading-relaxed text-base md:text-lg">
+                <p class="font-handwriting text-3xl text-rosepink-600">สุขสันต์วันครบรอบนะเบบี้ ❤️💐🎂!</p>
+                <div class="whitespace-pre-line space-y-4">
+                    <p>
+                        1 ปีที่แล้วในวันที่ <span class="font-bold text-rosepink-600 bg-rosepink-100 px-1.5 py-0.5 rounded">29 ตุลาคม</span> ฉันยังจำได้จนถึงวันนี้ ตอนที่ฉันเห็น👀เธอมองไปด้านข้างใกล้ๆ พุ่มไม้ในเกม Lonely Game วันนั้นที่ฉันเดินเข้าไปหาเธอและพูดคุยกับเธอ เป็นสิ่งที่ดีที่สุดที่ฉันเคยทำในชีวิต หลังจากนั้นเราสองคนก็แลก Instagram กัน และฉันก็เริ่มคุยกับเธอ ฉันไม่รู้วันที่แน่นอนว่าฉันตกหลุมรักเธอเมื่อไหร่ แต่ฉันรู้ว่าฉันตกหลุมรักเธอหลังจากที่เธอเริ่มส่งข้อความมาหาฉันทาง WhatsApp ขอบคุณมากนะที่ดาวน์โหลด WhatsApp นั่นเป็นเหตุผลที่ทำให้เราสนิทกันมากขึ้นและตกหลุมรักกันมากขึ้นเรื่อยๆ เพราะสิ่งที่เธอทำในวันนั้น ฉันถึงได้มีเธอเป็นแฟนและเป็นภรรยาของฉัน ตอนแรกจริงๆ ฉันคิดว่าเราอาจจะไม่ได้อยู่ด้วยกันนาน ฉันคิดว่าเธอคงจะทิ้งฉันไปภายใน 3 เดือน 😢 แต่ผ่านมา 1 ปีแล้ว 😭 และเธอก็ยังเป็นแฟนของฉันอยู่ 🫡❤️😘
+                    </p>
+                    <p>
+                        เราผ่านช่วงเวลาที่ยากลำบากมาด้วยกันมากมาย 🫂 อย่างเช่น จำได้ไหมว่าเราเริ่มทะเลาะกันครั้งใหญ่ที่สุดเพราะพวกผู้หญิงบ้าๆ ในบังกลาเทศ 😡😤 วันนั้นเธอร้องไห้ 😭 ฉันคิดว่าวันนั้นเธอจะเลิกกับฉันจริงๆ 😥 แต่เธอก็ไม่ได้ทำ 🥹 เธอร้องไห้ เธอโทษฉัน เธอดุฉัน เธอเมินฉัน แต่เธอก็ไม่เคยปล่อยมือจากฉัน <span class="font-bold text-rosepink-600 bg-rosepink-100 px-1.5 py-0.5 rounded">ฉันเคารพสิ่งนั้นมากจริงๆ 🫡🙇🏻‍♂️❤️</span> วันนั้นทำให้ฉันเริ่มมีความหวัง 🥹 ว่าเราอาจจะไปด้วยกันได้จนถึงที่สุดและได้อยู่ด้วยกัน 👰🏻‍♀️🤵 ตั้งแต่วันนั้นฉันก็เปลี่ยนไป 💪💪 ฉันหยุดเป็นผู้ชายที่คุยกับผู้หญิงหลายคน ฉันเข้าใจแล้วว่าความรักคืออะไรและความรักทำงานอย่างไร ฉันภูมิใจมากกับตัวเองที่กลายเป็นคนแบบนี้หลังจากหยุดคุยกับทุกคน (ผู้หญิง) ตั้งแต่วันนั้นฉันมั่นใจได้เลยว่าฉันไม่ได้คุยกับผู้หญิงคนไหนในฐานะเพื่อนเลย
+                    </p>
+                    <p>
+                        เมื่อเวลาผ่านไป ฉันก็เริ่มติดเธออย่างบ้าคลั่ง ฉันหยุดมองเธอไม่ได้ ฉันเข้าใจแล้วว่าความรักคืออะไร มันไม่ใช่แค่ความสวยงามของร่างกายหรืออะไรแบบนั้น แต่เป็นบุคลิกและนิสัยที่ทำให้คนคนหนึ่งสวยงาม และนั่นแหละคือความรัก เธอเป็นผู้หญิงที่เห็นแก่ตัวนะ แต่ฉันก็ยังคิดว่าเธอยังคงเห็นแก่ตัวอยู่ แม้เธอจะบอกว่าจะเป็นเด็กดีแล้วก็ตาม แต่ฉันก็ไม่ได้คิดว่ามันเป็นเรื่องแย่ขนาดนั้น เพราะถ้าเธอเริ่มรักฉันเหมือนที่ฉันรักเธอ มันคงจะเป็นปัญหาใหญ่เหมือนกัน เพราะฉันติดเธอมากเกินไป (เพราะความติดเธอนี้ บางครั้งฉันถึงกับไม่ได้กินข้าวและคุยกับเธอ แม้จะไม่ได้คุยกับคนอื่นเลยก็ตาม เพราะฉันพูดคุยกับเธอเพราะฉันมีความสุขจริงๆ และรักเธอมาก)
+                    </p>
+                    <p>
+                        อย่างที่ฉันพูดนะเบบี้ ตลอดเวลาที่เราอยู่ด้วยกัน พูดคุย เล่นเกม รักกัน นอนด้วยกัน และเรื่องไม่ดีอื่นๆ ที่เราทำด้วยกัน มันทำให้เราสนิทกันมากขึ้น ฉันอยากให้ข้อความนี้เป็นข้อความที่มีความสุขสำหรับเธอ แต่ฉันอาจทำให้มันเศร้าเล็กน้อยด้วยการย้อนนึกถึงเรื่องราวในอดีตที่เราเคยทำ ฉันอยากให้เราลืมอดีตของเรา และเริ่มต้นใหม่ในทุกๆ วัน พร้อมเดินหน้าต่อไปด้วยกันในฐานะครอบครัว 👩‍❤️‍💋‍👨 (มีแค่เธอกับฉัน)
+                    </p>
+                    <p>
+                        เพราะเบบี้ ฉันรู้แน่นอนว่าในอนาคตเราจะทะเลาะกันอีกมากมาย แต่ฉันหวังว่าเราคนใดคนหนึ่งจะยอมวางอีโก้ของตัวเองลงก่อน แล้วเริ่มพูดคุยและแก้ไขปัญหาทุกครั้ง ตั้งแต่วันที่ฉันบอกว่าฉันรักเธอ <span class="font-bold text-rosepink-600 bg-rosepink-100 px-1.5 py-0.5 rounded">ฉันหวังว่าเราจะผ่านทุกอย่างไปด้วยกันได้และใช้ชีวิตอยู่ด้วยกันตลอดไป</span> ฉันอาจเคยคิดว่าความสัมพันธ์นี้จะจบลงเร็วๆ นี้ แต่ความฝันของฉันคือการได้อยู่กับเธอ เติบโตไปพร้อมกับเธอ 👱🧔 และแก่ไปพร้อมกับเธอ 🧑‍🦳🧑‍🦲
+                    </p>
+                    <p>
+                        เธอเป็นผู้หญิงคนแรกของฉัน (<span class="font-bold text-rosepink-600">เจ้าหญิง 👸🏻</span>) ในทุกๆ เรื่อง เธอคือคนที่ฉันให้ความสำคัญมากที่สุดในทุกสิ่ง <span class="font-bold text-rosepink-600 bg-rosepink-100 px-1.5 py-0.5 rounded">เธอจะเป็นที่หนึ่งสำหรับฉันเสมอไม่ว่าจะเกิดอะไรขึ้น</span> เธอคือเบบี้เกิร์ลของฉัน ❤️🫂
+                    </p>
+                    <p>
+                        และเบบี้ ทุกครั้งที่ฉันบอกว่าเธอสวย มันไม่ใช่คำโกหก ❌ ฉันพูดมันออกมาจากใจจริงๆ ♥️ ฉันพูดจริงๆ 💯 อย่าคิดว่าฉันแค่พูดว่าเธอสวยเพื่อทำให้เธอรู้สึกดีขึ้นนะ <span class="font-bold text-rosepink-600 bg-rosepink-100 px-1.5 py-0.5 rounded">เธอสวยจริงๆ 👌💖</span> สำหรับฉัน ฉันไม่สนใจว่าคนอื่นจะพูดอะไรเกี่ยวกับเรา 😤🙄 พวกเขาอาจบอกว่าเราไม่เหมาะกัน หรือเราไม่ได้สวย แต่ใครจะสนว่าคนอื่นพูดอะไร 🙄🙄 ถ้าฉันบอกว่าเธอสวย เชื่อฉันเถอะว่าเธอสวยมากจริงๆ 😘❤️
+                    </p>
+                    <p>
+                        อย่ากลัวความสวยของตัวเองเลยนะ มันเพียงพอสำหรับเธอแล้ว และจงมั่นใจในตัวเองเสมอ ฉันรู้ว่าฉันไม่ใช่คนที่มั่นใจในตัวเองมากนัก แต่ฉันชอบเวลาที่เธอมั่นใจในตัวเองมากกว่า 💪🫂❤️
+                    </p>
+                    <p>
+                        เมื่อเราอยู่ด้วยกันครบ 1 ปี ซึ่งเป็นเรื่องที่ยากมากสำหรับคู่รักส่วนใหญ่ในโลกนี้ เราก็สามารถอยู่ด้วยกันได้สำเร็จแม้เราจะทะเลาะกันเหมือนเด็กๆ ดังนั้นมาอยู่ด้วยกันต่อไปอีกนานๆ และผ่านช่วงเวลาที่ยากลำบากเหล่านี้ไปด้วยกันในฐานะสามีภรรยา และหวังว่าสักวันเราจะได้แต่งงานกันจริงๆ 👰🏻‍♀️👀❤️ มาแสดงให้ทุกคนที่เคยบอกว่าเราอยู่ด้วยกันไม่ได้ เราทำไม่ได้ และมันไม่มีทางไปต่อได้เห็นกันเถอะว่าเราเป็นใคร และแต่งงานกันให้ได้ในอนาคตนะ 👰🏻‍♀️❤️
+                    </p>
+                    <p>
+                        สุขสันต์วันครบรอบนะเบบี้เกิร์ลของฉัน <span class="font-bold text-rosepink-600">โลกแบนๆ ของฉัน</span> เจ้าหญิงของฉัน โลกทั้งใบของฉัน <span class="font-bold text-rosepink-600 bg-rosepink-100 px-1.5 py-0.5 rounded">คนอันดับ 1 ของฉัน ❤️</span> หวังว่าเธอจะมีความสุขที่ได้อยู่กับฉัน และสนุกกับการใช้เวลาร่วมกับฉัน ขอให้พระพุทธเจ้าทรงอวยพรเธอ และขอให้เทพเจ้าทุกองค์คุ้มครองเธอและประทานพรทั้งหมดให้เธอ ขอให้ทุกความปรารถนาของเธอเป็นจริงนะ สู้ต่อไปนะเบบี้ ฉันอยู่ข้างหลังเธอเสมอ ❤️
+                    </p>
+                </div>
+                <p class="font-handwriting text-2xl text-rosepink-500 pt-4">รักเธอมากนะ ❤️😘💞 สุขสันต์วันครบรอบ 1 ปี!</p>
+            </div>
+        </section>
+
+        <!-- Memory Timeline -->
+        <section class="space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-bold text-slate-800">Our Journey</h2>
+                <p class="text-sm text-slate-500">Key milestones of our story</p>
+            </div>
+
+            <div class="relative border-l-2 border-rosepink-200 ml-4 md:ml-32 space-y-8">
+                <div id="timeline-container" class="space-y-8">
+                    <!-- Dynamic timeline elements insert here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-xs text-slate-400 py-6 space-y-2">
+            <p class="font-medium text-slate-600">Made with love by Kosala(Husband) specially for Kanokwan Phommathao (Rin)❤️</p>
+            <p class="font-handwriting text-lg text-rosepink-400">Happy 1st Anniversary, My Babu & Chooti!</p>
+        </footer>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        // Set Journey Milestones
+        const defaultTimeline = [
+            { title: "The Day We Met", date: "October 29, 2025", desc: "The day I saw you near the bushes in Lonely Game and talked to you." },
+            { title: "Day We Start Dating", date: "November 22, 2025", desc: "The beautiful day our official love story began." },
+            { title: "1 Year Anniversary", date: "November 22, 2026", desc: "Celebrating 1 year together through all ups and downs." }
+        ];
+
+        // Start Counter Date in Thailand Time (UTC+7) -> Nov 22, 2026 00:00:00 UTC+7
+        const anniversaryDate = '2025-11-22T00:00:00+07:00';
+        let isAudioPlaying = false;
+
+        // Init App
+        document.addEventListener('DOMContentLoaded', () => {
+            initHearts();
+            updateLiveTimer();
+            setInterval(updateLiveTimer, 1000);
+            renderTimeline();
+
+        });
+
+        // Background Floating Hearts Animation
+        function initHearts() {
+            const container = document.getElementById('hearts-container');
+            const heartIcons = ['❤️', '💖', '🌸', '🌷', '🧸', '🦋', '🎀'];
+            
+            for (let i = 0; i < 32; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart text-lg md:text-2xl';
+                heart.innerText = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 5 + 6) + 's';
+                heart.style.animationDelay = (Math.random() * 5) + 's';
+                container.appendChild(heart);
+            }
+        }
+
+        // Detailed Real-Time Timer (Years, Months, Days, Hours, Minutes, Seconds)
+        function updateLiveTimer() {
+            const start = new Date(anniversaryDate);
+            const now = new Date();
+
+            if (isNaN(start.getTime())) return;
+
+            let years = now.getFullYear() - start.getFullYear();
+            let months = now.getMonth() - start.getMonth();
+            let days = now.getDate() - start.getDate();
+            let hours = now.getHours() - start.getHours();
+            let minutes = now.getMinutes() - start.getMinutes();
+            let seconds = now.getSeconds() - start.getSeconds();
+
+            if (seconds < 0) {
+                seconds += 60;
+                minutes--;
+            }
+            if (minutes < 0) {
+                minutes += 60;
+                hours--;
+            }
+            if (hours < 0) {
+                hours += 24;
+                days--;
+            }
+            if (days < 0) {
+                const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+                days += prevMonth.getDate();
+                months--;
+            }
+            if (months < 0) {
+                months += 12;
+                years--;
+            }
+
+            document.getElementById('years-count').innerText = Math.max(0, years);
+            document.getElementById('months-count').innerText = Math.max(0, months);
+            document.getElementById('days-count').innerText = Math.max(0, days);
+            document.getElementById('hours-count').innerText = String(Math.max(0, hours)).padStart(2, '0');
+            document.getElementById('minutes-count').innerText = String(Math.max(0, minutes)).padStart(2, '0');
+            document.getElementById('seconds-count').innerText = String(Math.max(0, seconds)).padStart(2, '0');
+        }
+
+        // Timeline Renders
+        function renderTimeline() {
+            const container = document.getElementById('timeline-container');
+            container.innerHTML = defaultTimeline.map(m => `
+                <div class="relative pl-6 md:pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-rosepink-500 tl-dot border-4 border-white shadow-sm group-hover:scale-125 transition-transform"></div>
+                    <div class="glass-card p-4 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                        <span class="text-xs font-bold text-rosepink-600 uppercase tracking-wider">${m.date}</span>
+                        <h4 class="text-base font-bold text-slate-800">${m.title}</h4>
+                        <p class="text-xs text-slate-600 mt-1">${m.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+    </script>
+
+    <script>
+    (function(){
+        const root=document.documentElement; root.classList.add('js');
+        // scroll reveal
+        const targets=[...document.querySelectorAll('header, section, footer, #letter-view p')];
+        targets.forEach(el=>el.classList.add('reveal'));
+        if('IntersectionObserver' in window){
+            const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+            targets.forEach(el=>io.observe(el));
+            setTimeout(()=>targets.forEach(el=>el.classList.add('in')),4000);
+        } else targets.forEach(el=>el.classList.add('in'));
+        // love burst
+        const em=['❤️','💖','💕','🌸','✨','🦋','🎀','💗'];
+        function burst(x,y,n){for(let i=0;i<n;i++){const b=document.createElement('span');b.className='burst';b.textContent=em[Math.floor(Math.random()*em.length)];const a=Math.random()*6.28,d=80+Math.random()*180;b.style.left=x+'px';b.style.top=y+'px';b.style.setProperty('--dx',Math.cos(a)*d+'px');b.style.setProperty('--dy',Math.sin(a)*d-60+'px');b.style.setProperty('--r',(Math.random()*360-180)+'deg');document.body.appendChild(b);setTimeout(()=>b.remove(),1500)}}
+        document.getElementById('love-btn').addEventListener('click',e=>{const r=e.currentTarget.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,26)});
+        document.addEventListener('click',e=>{if(e.target.id!=='love-btn')burst(e.clientX,e.clientY,8)});
+        // sparkle trail
+        let last=0;
+        document.addEventListener('pointermove',e=>{const t=Date.now();if(t-last<70||e.pointerType==='touch')return;last=t;const s=document.createElement('span');s.className='spark';s.textContent='✨';s.style.left=e.clientX+'px';s.style.top=e.clientY+'px';s.style.setProperty('--dx',(Math.random()*40-20)+'px');s.style.setProperty('--dy','40px');s.style.setProperty('--r','90deg');document.body.appendChild(s);setTimeout(()=>s.remove(),900)});
+        // countdown to the 1-year mark
+        const target=new Date('2026-11-22T00:00:00+07:00');
+        function cd(){const el=document.getElementById('countdown');if(!el)return;let d=target-new Date();if(d<=0){el.textContent='🎉 Happy 1st Anniversary, Rin! 🎉';return}
+            const h=Math.floor(d/36e5),m=Math.floor(d%36e5/6e4),sec=Math.floor(d%6e4/1e3);
+            el.textContent='⏳ Our 1-year anniversary in '+h+'h '+String(m).padStart(2,'0')+'m '+String(sec).padStart(2,'0')+'s'}
+        cd();setInterval(cd,1000);
+    })();
+    </script>
+</body>
+</html>
